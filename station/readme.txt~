@@ -174,5 +174,4 @@ catkin_make
 
 接下来每次修改完代码后只需要用build一下然后运行即可
 
-*注意，如果遇到CMakeList.txt修改后qt重新编译出现问题可以试试将~/catkin_ws/build下的生成的station文件夹及~/catkin_ws/src/station下的CMakeList.txt.user文件删除后重新生成
 
