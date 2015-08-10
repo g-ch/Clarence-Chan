@@ -1,4 +1,3 @@
-# Clarence-Chan
 作者：Clarence Chan     日期：2015.8.6
 e-mail:chg10086@yeah.net
 
@@ -104,8 +103,12 @@ source ~/.bashrc
 sudo apt-get install python-rosinstall
 
 8、安装mavros（参见http://wiki.ros.org/mavros）
+
+原版mavros安装方法如下：
 终端执行
 sudo apt-get install ros-jade-mavros ros-jade-mavros-extras
+
+*如果是从github上下载的源码安装为ros工作空间下的一个包（在下一步建立完工作空间之后完成），需要将路径/catkin_ws/src/mavros/libmavconn下的CMakeLists.txt中的catkin_add_gtest(mavconn-test test/test_mavconn.cpp)改为add_library(mavconn-test test/test_mavconn.cpp)，也可以自行在ros上配置gtest的环境使用，这里为了方便就直接替换吧。
 
 
 /**********************************************************/
@@ -175,5 +178,4 @@ catkin_make
 
 接下来每次修改完代码后只需要用build一下然后运行即可
 
-*注意，如果遇到CMakeList.txt修改后qt重新编译出现问题可以试试将~/catkin_ws/build下的生成的station文件夹及~/catkin_ws/src/station下的CMakeList.txt.user文件删除后重新生成
 
